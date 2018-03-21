@@ -1,0 +1,485 @@
+<!doctype html>
+
+<html>
+    
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+<head><title>BalloonArtMaster.com</title></head>
+    <body>
+    
+        
+        <div id="homeButton" class="button">Home</div>
+        <div id="button2" class="button">Info</div>
+        <div id="button3" class="button">About Me</div>
+        <div id="menuButton" ><img src="menu.png" id="menuBtnPic"/></div>
+        <img src="icon.png" id="icon"/>
+        <p id="pageHeader">BalloonArtMaster.com</p>
+        <div id="headerDiv"></div>
+        
+        <div id="menuDropDown">
+            
+            <div class="dropDownButton" id="home">Home</div>
+            <div class="dropDownButton" id="info">Info</div>
+            <div class="dropDownButton" id="aboutMe">About Me</div>
+            
+        </div>
+        
+        <div id="otherPage" class="page">
+            <img src="pageHeaderImage.PNG" id="headerImage"/>
+            
+            <h1 class="title">Contact/Booking</h1>
+            <p class="bodyText">I do birthday parties, business parties, and any other special event. Have any questions? Are you ready to book? You can contact me at:</p>
+            <div id="listContainer">
+                <ul class="bodyList">
+                    <li>Phone: 540-820-8507</li>
+                    <li>Email: BalloonArtMaster@gmail.com</li>
+                </ul>
+            </div>
+            
+            <br>
+            
+            <h1 class="title">Rate</h1>
+            <p class="bodyText">I charge $50 per hour for most events.</p>
+            
+            <br>
+            
+            <h1 class="title">Regular Events</h1>
+            <p class="bodyText">Here is a list of events that I have regularly attend throughout the year:</p>
+            <div id="listContainer">
+                <ul class="bodyList">
+                    <li>Annual Fall Festival - Dayton, Early October</li>
+                    <li>Halloween on the square - Downtown Harrisonburg, Around Halloween</li>
+                    <li>Redbud Festival - Dayton, Mid April</li>
+                    <li>Strawberry Festival - Downtown Harrisonburg, Mid June</li>
+                    <li>July 4th Downtown - Downtown Harrisonburg, July 4th</li>
+                </ul>
+            </div>
+            
+            <div class="instagram"><div id="instagramText">Follow me on Instagram!</div><span><a href="https://www.instagram.com/balloonartmaster/"><img src="instaGram.png" id="instagram" /></a></span></div>
+        </div>
+        
+        <div id="otherPage2" class="page">
+            <img src="5.png" id="aboutMeImage"/>
+            <h1 class="title">About Me</h1>
+            <p class="bodyText">My name is Jonathan Warner, and I have been making balloon animals since I was 12. I am a junior at Harrisonburg High School as of 2017. In my spare time I like to run, code, and play with my dog Chester. </p>
+        </div>
+
+        <div id="slideShowContainer">
+            <div id="slideShowImageContainer">
+                <img src="1.png" id="slideShowImage"/> 
+            </div>
+            <div id="slideButtonContainer">
+                <div id="slide1" class="slideButtons"></div>
+                <div id="slide2" class="slideButtons"></div>
+                <div id="slide3" class="slideButtons"></div>
+                <div id="slide4" class="slideButtons"></div>
+                <div id="slide5" class="slideButtons"></div>
+            </div>
+            
+        </div>
+        
+        
+        <style>
+            
+            body {
+                
+                margin: 0;
+                
+                
+            }
+            
+            html { 
+                background: url(Background.png) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            
+            #headerDiv {
+                
+                background-color: rgba(26, 84, 141, 0.6);
+                width:100%;
+                height:70px;
+                z-index: 0;
+                
+            }
+            
+            #pageHeader {
+                
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+                float:left;
+                position: absolute;
+                margin-left: 80px;
+                margin-top: 10px;
+                font-size: 35px;
+            }
+            
+            #icon {
+                
+                width:60px;
+                height:60px;
+                float:left;
+                margin-left:10px;
+                margin-top: -2px;
+                z-index: 5;
+            }
+            
+            #menuButton {
+                
+                width: 35px;
+                height: 30px;
+                z-index: 10;
+                border: 1.5px solid #2749a5;
+                /*position: absolute;*/
+                background-color:#3159c6;
+                color:#ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                text-align: center;
+                border-radius: 5px;
+                visibility: hidden;
+                padding-top:7px;
+                float: right;
+                margin-top: 10px;
+                margin-right: 10px;
+            }
+            
+            #menuBtnPic {
+                
+                width: 20px;
+                height:20px;
+                
+            }
+            
+            #menuDropDown {
+                display: block;
+                height: 105px;
+                width: 100%;
+                background-color: #3159c6;
+            }
+            
+            .dropDownButton {
+                width 100%;
+                height: 33px;
+                background-color: #3159c6;
+                color:#ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                text-align: center;
+                border-bottom: 2px solid #2749a5;
+                line-height: 30px;
+                
+            }
+            
+            .page {
+                display: none;
+                position: absolute;
+                width:0px;
+                height:0px;
+                background-color: white;
+                border-radius: 10px;
+            }
+            
+            .button {
+                
+                z-index: 10;
+                position: absolute;
+                float:left;
+                width:200px;
+                height:40px;
+                background-color:#3159c6;
+                border-bottom: 4px solid #2749a5;
+                color:#ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                text-align: center;
+                padding-top:10px;
+                
+                
+            }
+            
+            .slideButtons {
+                width:12px;
+                height:12px;
+                background-color: lightgray;
+                border-radius:100px;
+                float:left;
+                margin-left:15px;
+                margin-top: 10px;
+                
+            }
+            
+            .slideButtons:hover {
+                
+                border: 3px solid orange !important;
+                width:6px !important;
+                height: 6px !important;
+            }
+            
+            #slide1 {
+                
+                margin-left: 46%;
+                border: 3px solid #71c7e3;
+                height: 6px;
+                width:6px;
+            }
+            
+            
+            #slideShowContainer {
+                
+                display: block
+                visibility: hidden;
+                background-color: black;
+                
+            }
+            
+            #slideShowImage {
+                visibility: hidden;
+                border-radius: 2px;
+                
+            }
+            
+            
+            #homeButton {
+                margin-left:450px;
+            }
+            #button2 {
+                margin-left:670px;
+            }
+            #button3 {
+                margin-left:890px;
+            }
+            
+            .button:hover {
+                
+                border-bottom: 4px solid #3159c6; 
+                
+            }
+            
+            .instagram {
+                margin-left: 40%;
+                padding-top:50px;
+            }
+            #instagram {
+                
+                width:70px;
+                height:53px;
+                padding-left:43px;
+            }
+            #instagramText {
+                padding:10px;
+                padding-right:50px;
+            }
+            #headerImage {
+                width:90%;
+                margin-left: 5%;
+                margin-top: 2%;
+                border-bottom: 4px solid red;
+            }
+            #aboutMeImage {
+                width: 40%;
+                margin-left:30%;
+                margin-top: 2%;
+                /*border-bottom: 2px solid #242424;*/
+                box-shadow: 2px 2px 2px 2px;
+                
+            }
+            .title {
+                text-align: center;
+                color:#242424;
+            }
+            .bodyText {               
+                text-align: center;
+                padding-left:10%;
+                padding-right:10%;
+                font-size: 24px;
+                color:#242424;
+            }
+            .bodyList li {
+                font-size: 20px;
+                color:#242424;
+                padding-top: 10px;
+            }
+            #listContainer {
+                position: relative;
+                padding-left: 20%;
+            }
+        </style>
+    
+    <script src="pageToggle.js"></script>    
+    <script>
+        
+        var pageWidth;
+        var pageMargin;
+        
+        $(document).ready(function() {
+            
+            $("#menuDropDown").css("display", "none")
+            $(".button").css("display", "none")
+            
+            resizeSlideShowDesktop();
+        
+            //if the window is smaller than 1080px then change the screen setup to mobile  
+            if(window.innerWidth <= 1080) {
+            
+                $("#menuButton").css("visibility", "visible");
+                
+                
+            
+                pageWidth = "90%"
+                pageMargin = "5%"
+            
+            }
+            else {
+            
+                $(".button").css("display", "inherit")
+            
+                pageWidth = "68%"
+                pageMargin = "16%"
+            
+            
+            }
+        })
+        
+        $(window).resize(function() {
+            
+            if(window.innerWidth >= 1000) {
+                resizeSlideShowDesktop();
+            
+            }
+        });
+        //resizes the slideshow components to keep them sized correctly for the size of the window
+        function resizeSlideShowDesktop() {
+            
+            var imageHeight = window.innerHeight - window.innerHeight/6
+            
+            $("#slideShowImage").css({
+                "height": window.innerHeight - window.innerHeight/6, 
+                "visibility": "visible", 
+                "marginLeft":(window.innerWidth-imageHeight*640/1136)/2
+                
+            });
+            $("#slideShowContainer").css({
+                "width": window.innerWidth, 
+                "visibility": "visible", 
+                "height": $("#slideShowImage").css("height")
+            });
+            $("#slideShowImageContainer").css({
+                "width": window.innerWidth, 
+                "visibility": "visible", 
+                "height": $("#slideShowImage").css("height")
+            });
+        }
+        
+        var imageNumber = 1;
+        var prevImage = 0;
+        
+        var timeCounter = 0;
+        
+        function nextSlide() {
+            if (homePageOpen == true) { 
+                
+                $("#slideShowImage").css("display", "block");
+                
+                $("#slideShowImage").fadeOut("slow", function() {
+                        
+                    if (imageNumber > 4) {
+                        
+                        imageNumber = 0;
+                
+                    }
+                    
+                    imageNumber++
+                    
+                    if (imageNumber == 1) {
+                         $("#slide" +  5).css({"border": "none", "width":"12px", "height": "12px"});
+                    }
+                    
+                    $("#slide" + (imageNumber-1)).css({"border": "none", "width":"12px", "height": "12px"});
+                    $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+                    
+                    
+                    
+                    $("#slideShowImage").attr("src", imageNumber + ".png");
+                    
+                    $("#slideShowImage").fadeIn("slow");
+               
+                
+                })
+            
+                var prevImg = 0;
+            }
+        }
+        setInterval(function() { 
+            
+            timeCounter += 1;
+            
+            if(timeCounter >= 5) {
+                nextSlide(); 
+                resetTimer();   
+            }
+            
+        }, 1000);
+        
+        function resetTimer() {
+            timeCounter = 0;
+        }
+        
+        $("#slide1").click(function() {
+            
+            prevImg = imageNumber;
+            $("#slideShowImage").attr("src", "1" + ".png");
+            imageNumber = 1;
+            $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+            $("#slide" + prevImg).css({"border": "none", "width":"12px", "height": "12px"});
+            resetTimer();
+            
+        });
+        
+        $("#slide2").click(function() {
+            
+            prevImg = imageNumber;
+            $("#slideShowImage").attr("src", "2" + ".png");
+            imageNumber = 2;
+            $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+            $("#slide" + prevImg).css({"border": "none", "width":"12px", "height": "12px"});
+            resetTimer();
+        });
+        
+        $("#slide3").click(function() {
+            
+            prevImg = imageNumber;
+            $("#slideShowImage").attr("src", "3" + ".png");
+            imageNumber = 3;
+            $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+            $("#slide" + prevImg).css({"border": "none", "width":"12px", "height": "12px"});
+            resetTimer();
+        });
+        $("#slide4").click(function() {
+            
+            prevImg = imageNumber;
+            $("#slideShowImage").attr("src", "4" + ".png");
+            imageNumber = 4;
+            $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+            $("#slide" + prevImg).css({"border": "none", "width":"12px", "height": "12px"});
+            resetTimer();
+        });
+        
+        $("#slide5").click(function() {
+            
+            prevImg = imageNumber;
+            $("#slideShowImage").attr("src", "5" + ".png");
+            imageNumber = 5;
+            $("#slide" + imageNumber).css({"border": "3px solid #71c7e3", "width": "6px", "height": "6px"});
+            $("#slide" + prevImg).css({"border": "none", "width":"12px", "height": "12px"});
+            resetTimer();
+            
+        });
+        
+    </script>
+        
+    </body>
+
+</html>
