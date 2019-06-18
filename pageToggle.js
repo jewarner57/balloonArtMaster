@@ -27,7 +27,7 @@ function openInfo() {
         $("#otherPage").animate({
             width:pageWidth,
             marginLeft:pageMargin,
-            height:"1200px",
+            height:"1300px",
             borderRadius:"0",
             zIndex: "7"
         }, 600);
@@ -54,7 +54,7 @@ function openAboutMe() {
         $("#otherPage2").animate({
             width:pageWidth,
             marginLeft:pageMargin,
-            height:windowHeight,
+            height:"100vh",
             borderRadius:"0",
             zIndex: "7"
         }, 600);

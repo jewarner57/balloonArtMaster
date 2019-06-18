@@ -39,7 +39,7 @@
             <br>
             
             <h1 class="title">Rate</h1>
-            <p class="bodyText">I charge $40 per hour for most events.</p>
+            <p class="bodyText">I charge $50 per hour for most events.</p>
             
             <br>
             
@@ -59,9 +59,9 @@
         </div>
         
         <div id="otherPage2" class="page">
-            <img src="5.png" id="aboutMeImage"/>
+            <img src="1.png" id="aboutMeImage"/>
             <h1 class="title">About Me</h1>
-            <p class="bodyText">My name is Jonathan Warner, and I have been making balloon animals since I was 12. I am a junior at Harrisonburg High School as of 2017. In my spare time I like to run, code, and play with my dog Chester. </p>
+            <p class="bodyText">My name is Jonathan Warner, and I have been making balloon animals since I was 12. I graduated Harrisonburg High School in 2019. In my spare time I like to run, code, and play with my dog Chester. </p>
         </div>
 
         <div id="slideShowContainer">
@@ -127,19 +127,16 @@
             }
             
             #menuButton {
-                
                 width: 35px;
                 height: 30px;
                 z-index: 10;
                 border: 1.5px solid #2749a5;
-                /*position: absolute;*/
                 background-color:#3159c6;
                 color:#ffffff;
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 24px;
                 text-align: center;
                 border-radius: 5px;
-                visibility: hidden;
                 padding-top:7px;
                 float: right;
                 margin-top: 10px;
@@ -171,6 +168,33 @@
                 border-bottom: 2px solid #2749a5;
                 line-height: 30px;
                 
+            }
+
+            @media only screen and (max-width: 1100px) {
+              #menuButton {
+                visibility: visible;
+                display: block;
+              }
+              .button {
+                visibility: hidden;
+              }
+            }
+            @media only screen and (min-width: 1100px) {
+              #menuButton {
+                visibility: hidden;
+                display: none;
+              }
+              #menuDropDown {
+                visibility: hidden;
+                display: none !important;
+              }
+              .dropDownButton {
+                visibility: hidden;
+                display: none;
+              }
+              .button {
+                visibility: visible;
+              }
             }
             
             .page {
